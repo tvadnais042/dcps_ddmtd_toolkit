@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo ./loc_pll.exe 
+sudo ./mezz_pll.exe

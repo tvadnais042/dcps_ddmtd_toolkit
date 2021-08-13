@@ -1,0 +1,18 @@
+https://medium.com/linagora-engineering/using-a-pi-3-as-a-ethernet-to-wifi-router-2418f0044819
+
+#master side...
+sudo ifconfig enxb827eb5cca4f 192.168.2.1 netmask 255.255.255.0 broadcast 192.168.2.255
+
+sudo iptables -t nat -A POSTROUTING -s 192.168.2.0/24 -o wlan0 -j MASQUERADE
+
+
+There is no option in iptables which will make your rules permanent. But you can use iptables-save and iptables-restore to fulfill your task.
+
+First add the iptable rule using the command you gave.
+
+Then save iptables rules to some file like /etc/iptables.conf using following command:
+
+$  iptables-save > /etc/iptables.conf
+Add the following command in /etc/rc.local to reload the rules in every reboot.
+
+$  iptables-restore < /etc/iptables.conf
