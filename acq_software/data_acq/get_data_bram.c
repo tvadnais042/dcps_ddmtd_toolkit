@@ -115,6 +115,23 @@ int data_transfer()
 }
 
 
+// Assumes little endian
+void printBits(size_t const size, void const * const ptr)
+{
+    unsigned char *b = (unsigned char*) ptr;
+    unsigned char byte;
+    int i, j;
+    
+    for (i = size-1; i >= 0; i--) {
+        for (j = 7; j >= 0; j--) {
+            byte = (b[i] >> j) & 1;
+            printf("%u", byte);
+        }
+    }
+    puts("");
+}
+
+
 
 int main(int argc, char** argv) {
 
@@ -158,6 +175,13 @@ fp3 = fopen(file_name3,"a");
 
 const uint ADDR_MAP_SIZE =4*8192UL ;
 uint num_words = 1000; //Should not exceed write depth
+
+
+uint firmware_version = 0;  // Firmware version
+uint fifo_full = 0;  // Checks to see is 24 fifos are programmed full (not actually full)
+uint internal_counter = 0; // Test counter to check if there is a clock
+uint internal_reset = 1;
+
 uint read_width = 256;
 uint bytes_transferred = read_width*num_words/8;
 
@@ -188,33 +212,94 @@ memset(bram_data_addr_1, 0xff, bytes_transferred); //reset memory
 
 unsigned int *bram_addr_2 = mmap(NULL,ADDR_MAP_SIZE , PROT_READ | PROT_WRITE, MAP_SHARED,mem_fd,0x82000000 ); // Memory map AXI Lite register block
 if(bram_addr_2 == (void *) -1) {printf("FATAL BRAM ADDR"); return 0;};  
-bram_addr_2[0] = num_words; // Number of words to transfer // First addr reserved for fpga settings
+unsigned int *fpga_settings = bram_addr_2;
+firmware_version = 0xff&(fpga_settings[0] >> 24); //first 8 bits is firmware information
+printf("Firmware Version: %u.%u \n ",firmware_version/10,firmware_version%10);
+
+
+
+
+
 uint *bram_data_addr_2 = bram_addr_2 + read_width/32; //data will be transferred from the Next line
 memset(bram_data_addr_2, 0xff, bytes_transferred); //reset memory
 
 
 unsigned int *bram_addr_3 = mmap(NULL,ADDR_MAP_SIZE , PROT_READ | PROT_WRITE, MAP_SHARED,mem_fd,0x84000000 ); // Memory map AXI Lite register block
 if(bram_addr_3 == (void *) -1) {printf("FATAL BRAM ADDR"); return 0;};  
-bram_addr_3[0] = num_words; // Number of words to transfer // First addr reserved for fpga settings
+// bram_addr_3[0] = num_words; // Number of words to transfer // First addr reserved for fpga settings
 uint *bram_data_addr_3 = bram_addr_3 + read_width/32; //data will be transferred from the Next line
 memset(bram_data_addr_3, 0xff, bytes_transferred); //reset memory
 
 
 
+
+
 //Reset FPGA
 reset_fpga();
-usleep(10000); //Dont Touch
+int ii = 0;
+while (internal_reset == 1)
+{
+    internal_reset = 0x1&(fpga_settings[2]);
+    // printf("Internal Reset: %u \n ",internal_reset);
+    ii=ii+1;
+    if (ii > 1000) {
+        printf("Internal reset still not zero after 1000 cycles, exiting program");
+        return 0;
+    }
+    else
+    {
+        usleep(100);
+    }
+}
 
 
-// memdump(dma_addr,256/8);
+
+
 uint total_data_inBytes = 0;
 uint iter = N;
 
 
 
+// for (int i=0; i< iter; i=i+1)
+// {
+//     printf("%u \n ",&fpga_settings[1]);
+//     usleep(100000);
+// }
+
+
 tic = clock();
 for (int i =0; i < iter; i=i+1 )
 {
+
+    fifo_full = 0x000000001000&(0xfff&(fpga_settings[0]));
+    ii=0;
+    while(fifo_full == 0)
+    {
+        // fifo_full = 0xffffff&(fpga_settings[0]);
+        // printBits(sizeof(fifo_full), &fifo_full);
+        if(ii > 10000)
+        {
+            printf("First FIFO not filling after 10000 cycles, exiting program \n");
+            return 0;
+        }
+        else
+        {
+            usleep(10);
+        }
+        ii = ii+1;
+        
+        // fifo_full = 0x1&(0xffffff&(fpga_settings[0])>>8);// wait until the Channel 9 FIFO gets full.
+        fifo_full = 0x1&(0xffffff&(fpga_settings[0])>>3);// wait until the Channel 4 FIFO gets full. 
+        
+
+    }
+
+    // fifo_full = 0xffffff&(fpga_settings[0]);
+    // printBits(sizeof(fifo_full), &fifo_full);
+
+    // printBits(sizeof(fifo_full), &fifo_full);
+
+
 
     start_data_transfer();
 
@@ -230,12 +315,20 @@ for (int i =0; i < iter; i=i+1 )
     total_data_inBytes = total_data_inBytes+bytes_transferred;
 
     stop_data_transfer();
-    usleep(1000); // Adjusting this will give time for the FIFO to fill up
+    // usleep(10000); // Adjusting this will give time for the FIFO to fill up
+
+
+    // fifo_full = 0xffffff&(fpga_settings[0]);
+    // printBits(sizeof(fifo_full), &fifo_full);
+
+    // internal_counter = 0xffffffff&(fpga_settings[1]);
+    // printf("%u \n ",internal_counter);
+
+    // printBits(sizeof(settings_from_FPGA2), &settings_from_FPGA2);
 
     // printf("%u \n ",);
 
 }
-
 toc = clock();
 cpu_time_used = ((double) (toc - tic)) / CLOCKS_PER_SEC;
 
@@ -258,7 +351,6 @@ write_toFile( fp3, memory_LongStore_3,total_data_inBytes);
 
 
 
-
 munmap((void *)memory_LongStore_1,LONG_MEM);
 munmap((void *)bram_addr_1, (size_t)ADDR_MAP_SIZE);
 close(mem_fd);
@@ -271,6 +363,6 @@ fclose(fp3);
 
 gpio_close();
 
-
+return 0;
 }
 

@@ -73,7 +73,7 @@ int main(int argc, char** argv)
     ballpark=(0x00); // For FPGA
     page=(0x00); // Doesn't matter
     init_addr();
-    bcm2835_spi_setClockDivider(BCM2835_SPI_CLOCK_DIVIDER_64);    
+    bcm2835_spi_setClockDivider(BCM2835_SPI_CLOCK_DIVIDER_32);    
     spi_MCP_io(ballpark, page); //Setting Ballpark
 
 
@@ -128,6 +128,9 @@ void set_dcps_delay(int delay)
     // bcm2835_spi_setBitOrder(BCM2835_SPI_BIT_ORDER_MSBFIRST);
 
     bcm2835_spi_set_speed_hz(100000);
+    // bcm2835_spi_setClockDivider(BCM2835_SPI_CLOCK_DIVIDER_65536);    
+    // printf("%u SPI Speed \n",BCM2835_SPI_CLOCK_DIVIDER_65536);
+
 
 
 
