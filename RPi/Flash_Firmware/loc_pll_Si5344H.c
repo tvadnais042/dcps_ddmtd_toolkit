@@ -57,6 +57,7 @@ int main()
   {
 
     spi_si5344_write(si5344h_revd_registers[i].address,si5344h_revd_registers[i].value);
+    if (i == 2) usleep(400); //After the third register wait for 400usec
     //Making sure these are written properly
     if (spi_si5344_read(si5344h_revd_registers[i].address) != si5344h_revd_registers[i].value) printf("address = 0x%04x, value = 0x%02x ; Value returned = 0x%02x   \n",si5344h_revd_registers[i].address,si5344h_revd_registers[i].value ,spi_si5344_read(si5344h_revd_registers[i].address) );
   }
