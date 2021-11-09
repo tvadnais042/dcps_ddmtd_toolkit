@@ -50,7 +50,10 @@ output wire  M_AXIS_TLAST,
 // TREADY indicates that the slave can accept a transfer in the current cycle.
 input  wire  M_AXIS_TREADY,
 
-input wire WORDS_TO_SEND
+input wire [31:0] WORDS_TO_SEND, //Not used...
+
+output wire [NUM_DDMTD-1:0] PROG_FULL
+
 );
 
 //Declaring nets
@@ -103,7 +106,8 @@ generate
         .M_AXIS_TVALID(net[i].tvalid), //output
         .M_AXIS_TLAST(net[i].tlast),
         .enable_read_logic(1),
-        .WORDS_TO_SEND(WORDS_TO_SEND)
+        .WORDS_TO_SEND(WORDS_TO_SEND), //Not used
+        .prog_full(PROG_FULL[i])
         );
 
 

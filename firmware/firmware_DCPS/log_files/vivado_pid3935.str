@@ -1,0 +1,122 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:39:14 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 3935
+License: Customer
+
+Current time: 	Mon Aug 09 21:46:51 CDT 2021
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: DISTRIB_ID=Pop
+OS Version: 5.11.0-7620-generic
+OS Architecture: amd64
+Available processors (cores): 16
+
+Display: :1
+Screen size: 2560x1440
+Screen resolution (DPI): 114
+Available screens: 1
+Available disk space: 31 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=14
+
+Java version: 	9.0.4 64-bit
+Java home: 	/home/rsaradhy/Software/Vivado/Vivado/2019.2/tps/lnx64/jre9.0.4
+Java executable location: 	/home/rsaradhy/Software/Vivado/Vivado/2019.2/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	rsaradhy
+User home directory: /home/rsaradhy
+User working directory: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/log_files
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/rsaradhy/Software/Vivado/Vivado
+HDI_APPROOT: /home/rsaradhy/Software/Vivado/Vivado/2019.2
+RDI_DATADIR: /home/rsaradhy/Software/Vivado/Vivado/2019.2/data
+RDI_BINDIR: /home/rsaradhy/Software/Vivado/Vivado/2019.2/bin
+
+Vivado preferences file location: /home/rsaradhy/.Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: /home/rsaradhy/.Xilinx/Vivado/2019.2/
+Vivado layouts directory: /home/rsaradhy/.Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	/home/rsaradhy/Software/Vivado/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/log_files/vivado.log
+Vivado journal file location: 	/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/log_files/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-3935-havi
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /home/rsaradhy/Software/Vivado/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: /home/rsaradhy/Software/Vivado/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: /home/rsaradhy/Software/Vivado/Vivado/2019.2
+XILINX_VITIS: 
+XILINX_VIVADO: /home/rsaradhy/Software/Vivado/Vivado/2019.2
+XILINX_VIVADO_HLS: /home/rsaradhy/Software/Vivado/Vivado/2019.2
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,007 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: ../project_2_bram.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project ../project_2_bram.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,013 MB. GUI used memory: 54 MB. Current time: 8/9/21, 9:46:54 PM CDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 80 MB (+81548kb) [00:00:14]
+// [Engine Memory]: 1,037 MB (+935991kb) [00:00:14]
+// [GUI Memory]: 111 MB (+27756kb) [00:00:14]
+// [Engine Memory]: 1,097 MB (+8486kb) [00:00:16]
+// WARNING: HEventQueue.dispatchEvent() is taking  3215 ms.
+// Tcl Message: open_project ../project_2_bram.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/rsaradhy/Software/Vivado/Vivado/2019.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:10 . Memory (MB): peak = 6630.754 ; gain = 123.355 ; free physical = 10484 ; free virtual = 13334 
+// Project name: project_2_bram; location: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS; part: xczu2cg-sfvc784-1-e
+// [GUI Memory]: 123 MB (+6977kb) [00:00:18]
+dismissDialog("Open Project"); // bB (cr)
+// [Engine Memory]: 1,160 MB (+7959kb) [00:00:19]
+// [Engine Memory]: 1,249 MB (+33044kb) [00:00:23]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,184 MB. GUI used memory: 65 MB. Current time: 8/9/21, 9:47:09 PM CDT

@@ -1,0 +1,532 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:39:14 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 3638
+License: Customer
+
+Current time: 	Fri Oct 08 12:27:41 CDT 2021
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: DISTRIB_ID=Pop
+OS Version: 5.11.0-7620-generic
+OS Architecture: amd64
+Available processors (cores): 16
+
+Display: :1
+Screen size: 2560x1440
+Screen resolution (DPI): 114
+Available screens: 1
+Available disk space: 31 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=14
+
+Java version: 	9.0.4 64-bit
+Java home: 	/home/rsaradhy/Software/Vivado/Vivado/2019.2/tps/lnx64/jre9.0.4
+Java executable location: 	/home/rsaradhy/Software/Vivado/Vivado/2019.2/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	rsaradhy
+User home directory: /home/rsaradhy
+User working directory: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/rsaradhy/Software/Vivado/Vivado
+HDI_APPROOT: /home/rsaradhy/Software/Vivado/Vivado/2019.2
+RDI_DATADIR: /home/rsaradhy/Software/Vivado/Vivado/2019.2/data
+RDI_BINDIR: /home/rsaradhy/Software/Vivado/Vivado/2019.2/bin
+
+Vivado preferences file location: /home/rsaradhy/.Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: /home/rsaradhy/.Xilinx/Vivado/2019.2/
+Vivado layouts directory: /home/rsaradhy/.Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	/home/rsaradhy/Software/Vivado/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/vivado.log
+Vivado journal file location: 	/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-3638-havi
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /home/rsaradhy/Software/Vivado/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: /home/rsaradhy/Software/Vivado/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: /home/rsaradhy/Software/Vivado/Vivado/2019.2
+XILINX_VITIS: 
+XILINX_VIVADO: /home/rsaradhy/Software/Vivado/Vivado/2019.2
+XILINX_VIVADO_HLS: /home/rsaradhy/Software/Vivado/Vivado/2019.2
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 998 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: project_2_bram.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project project_2_bram.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 54 MB. Current time: 10/8/21, 12:27:43 PM CDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 80 MB (+81085kb) [00:00:14]
+// [Engine Memory]: 1,026 MB (+923863kb) [00:00:14]
+// [GUI Memory]: 110 MB (+27775kb) [00:00:14]
+// [Engine Memory]: 1,082 MB (+4980kb) [00:00:16]
+// WARNING: HEventQueue.dispatchEvent() is taking  3288 ms.
+// Tcl Message: open_project project_2_bram.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/rsaradhy/Software/Vivado/Vivado/2019.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:10 . Memory (MB): peak = 6614.773 ; gain = 117.664 ; free physical = 9834 ; free virtual = 13158 
+// Project name: project_2_bram; location: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS; part: xczu2cg-sfvc784-1-e
+// [GUI Memory]: 130 MB (+14460kb) [00:00:18]
+dismissDialog("Open Project"); // bB (cr)
+// [Engine Memory]: 1,145 MB (+9963kb) [00:00:19]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v)]", 1, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v)]", 1); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// Elapsed time: 13 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v)]", 1); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), desing_ins : design_1_wrapper (design_1_wrapper.v)]", 17, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), desing_ins : design_1_wrapper (design_1_wrapper.v)]", 17); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), desing_ins : design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 18, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), desing_ins : design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 18, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// bB (cr):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd} 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0 Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 1,214 MB (+11924kb) [00:00:46]
+// WARNING: HEventQueue.dispatchEvent() is taking  1624 ms.
+// TclEventType: RSB_CONNECTION_CHANGE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 6808.867 ; gain = 0.000 ; free physical = 9332 ; free virtual = 12841 
+dismissDialog("Open Block Design"); // bB (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,254 MB. GUI used memory: 72 MB. Current time: 10/8/21, 12:28:23 PM CDT
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize IP: addNotify
+// Tcl Message: INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI 
+// [Engine Memory]: 1,314 MB (+41682kb) [00:01:08]
+// Elapsed time: 30 seconds
+selectCheckBox((HResource) null, "All Outputs", false); // g (o, r): FALSE
+selectCheckBox((HResource) null, "All Outputs", true); // g (o, r): TRUE
+selectCheckBox((HResource) null, "All Outputs", false); // g (o, r): FALSE
+selectCheckBox((HResource) null, "All Outputs", true); // g (o, r): TRUE
+selectCheckBox((HResource) null, "All Outputs", false); // g (o, r): FALSE
+selectCheckBox((HResource) null, "All Outputs", true); // g (o, r): TRUE
+selectCheckBox((HResource) null, "All Outputs", false); // g (o, r): FALSE
+selectCheckBox((HResource) null, "All Outputs", true); // g (o, r): TRUE
+selectCheckBox((HResource) null, "All Outputs", false); // g (o, r): FALSE
+selectCheckBox((HResource) null, "All Outputs", true); // g (o, r): TRUE
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+// [GUI Memory]: 146 MB (+10719kb) [00:01:36]
+dismissDialog("Re-customize IP"); // r (cr)
+// Elapsed time: 12 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main.v", 2); // i (h, cr)
+// Elapsed time: 16 seconds
+selectCodeEditor("main.v", 322, 368); // ch (w, cr)
+selectCodeEditor("main.v", 117, 397); // ch (w, cr)
+// Elapsed time: 12 seconds
+selectCodeEditor("main.v", 52, 267); // ch (w, cr)
+selectCodeEditor("main.v", 130, 272); // ch (w, cr)
+selectCodeEditor("main.v", 294, 312); // ch (w, cr)
+selectCodeEditor("main.v", 326, 311); // ch (w, cr)
+selectCodeEditor("main.v", 325, 311); // ch (w, cr)
+selectCodeEditor("main.v", 188, 306); // ch (w, cr)
+selectCodeEditor("main.v", 289, 332); // ch (w, cr)
+// Elapsed time: 24 seconds
+selectCodeEditor("main.v", 302, 444); // ch (w, cr)
+selectCodeEditor("main.v", 284, 428); // ch (w, cr)
+selectCodeEditor("main.v", 288, 455); // ch (w, cr)
+// Elapsed time: 174 seconds
+selectCodeEditor("main.v", 194, 316); // ch (w, cr)
+selectCodeEditor("main.v", 177, 467); // ch (w, cr)
+// Elapsed time: 29 seconds
+selectCodeEditor("main.v", 243, 573); // ch (w, cr)
+// Elapsed time: 46 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v)]", 16); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v)]", 16, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v)]", 16, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v)]", 16, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main.v", 2); // i (h, cr)
+// Elapsed time: 22 seconds
+selectCodeEditor("main.v", 131, 519); // ch (w, cr)
+// Elapsed time: 139 seconds
+selectCodeEditor("main.v", 62, 559); // ch (w, cr)
+selectCodeEditor("main.v", 17, 572); // ch (w, cr)
+selectCodeEditor("main.v", 86, 462); // ch (w, cr)
+selectCodeEditor("main.v", 36, 514); // ch (w, cr)
+// Elapsed time: 73 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v)]", 16); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v), ddmtd_inst[0].DDMTD_i : DDMTD_Sampler (DDMTD_Sampler.v)]", 17); // B (F, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,334 MB. GUI used memory: 77 MB. Current time: 10/8/21, 12:39:08 PM CDT
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v), ddmtd_inst[0].DDMTD_i : DDMTD_Sampler (DDMTD_Sampler.v), FIFO_10_inst : FIFO_10 (FIFO_10.xci)]", 18, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v), ddmtd_inst[0].DDMTD_i : DDMTD_Sampler (DDMTD_Sampler.v), FIFO_10_inst : FIFO_10 (FIFO_10.xci)]", 18, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// r (cr): Re-customize IP: addNotify
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Status Flags", 2); // bh (E, r)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,415 MB. GUI used memory: 88 MB. Current time: 10/8/21, 12:40:04 PM CDT
+// [Engine Memory]: 1,381 MB (+1251kb) [00:12:33]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,414 MB. GUI used memory: 96 MB. Current time: 10/8/21, 12:44:38 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,462 MB (+11852kb) [00:18:25]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,462 MB. GUI used memory: 125 MB. Current time: 10/8/21, 12:45:58 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,523 MB. GUI used memory: 88 MB. Current time: 10/8/21, 12:50:34 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 2177 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // i (h, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,546 MB. GUI used memory: 82 MB. Current time: 10/8/21, 1:19:39 PM CDT
+// [Engine Memory]: 1,546 MB (+11848kb) [00:52:05]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,538 MB. GUI used memory: 80 MB. Current time: 10/8/21, 1:49:43 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins axi_bram_ctrl_0_bram/enb] [get_bd_pins axi_bram_ctrl_0_bram/rstb] 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+// Elapsed time: 2154 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins axi_bram_ctrl_0_bram/enb] [get_bd_pins axi_bram_ctrl_0_bram/rstb]' 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,588 MB. GUI used memory: 81 MB. Current time: 10/8/21, 1:52:48 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,612 MB. GUI used memory: 81 MB. Current time: 10/8/21, 1:55:28 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,636 MB (+13477kb) [01:30:19]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,652 MB. GUI used memory: 81 MB. Current time: 10/8/21, 1:58:13 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,708 MB. GUI used memory: 81 MB. Current time: 10/8/21, 2:00:38 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,740 MB. GUI used memory: 81 MB. Current time: 10/8/21, 2:01:28 PM CDT
+// [Engine Memory]: 1,732 MB (+14770kb) [01:33:55]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,781 MB. GUI used memory: 81 MB. Current time: 10/8/21, 2:02:58 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,812 MB. GUI used memory: 81 MB. Current time: 10/8/21, 2:04:03 PM CDT
+// [Engine Memory]: 1,828 MB (+10183kb) [01:36:31]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,844 MB. GUI used memory: 81 MB. Current time: 10/8/21, 2:04:18 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,877 MB. GUI used memory: 81 MB. Current time: 10/8/21, 2:04:38 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,909 MB. GUI used memory: 81 MB. Current time: 10/8/21, 2:05:43 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,925 MB (+5034kb) [01:38:39]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,941 MB. GUI used memory: 81 MB. Current time: 10/8/21, 2:06:38 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,973 MB. GUI used memory: 81 MB. Current time: 10/8/21, 2:07:13 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,005 MB. GUI used memory: 81 MB. Current time: 10/8/21, 2:08:13 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,021 MB (+41kb) [01:41:23]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,037 MB. GUI used memory: 81 MB. Current time: 10/8/21, 2:09:03 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,133 MB (+11699kb) [01:42:53]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,133 MB. GUI used memory: 81 MB. Current time: 10/8/21, 2:10:28 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 1149 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// al (cr): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+// bB (cr):  Save Constraints : addNotify
+// TclEventType: RSB_SAVE_DIAGRAM
+dismissDialog("Save Project"); // al (cr)
+// Tcl Message: save_bd_design 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd>  Wrote  : </home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// A (cr): Synthesis is Out-of-date: addNotify
+dismissDialog("Save Constraints"); // bB (cr)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cr)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 4 seconds
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 16 
+// Tcl Message: [Fri Oct  8 14:10:50 2021] Launched synth_1... Run output will be captured here: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/runme.log [Fri Oct  8 14:10:50 2021] Launched impl_1... Run output will be captured here: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// aj (cr): Synthesis Failed: addNotify
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 39 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // aj (cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-806] Syntax error near ;. [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Array.v:55]. ]", 4, true); // ah (O, cr) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Array.v;-;;-;16;-;line;-;55;-;;-;16;-;"); // ah (O, cr)
+selectCodeEditor("DDMTD_Array.v", 321, 187); // ch (w, cr)
+selectCodeEditor("DDMTD_Array.v", 316, 178); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, DDMTD_Sampler.v]", 3, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, DDMTD_Sampler.v]", 3, false, false, false, false, false, true); // B (F, cr) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,206 MB. GUI used memory: 82 MB. Current time: 10/8/21, 2:11:48 PM CDT
+selectCodeEditor("DDMTD_Sampler.v", 219, 66); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+dismissDialog("No Implementation Results Available"); // A (cr)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 16 
+// Tcl Message: [Fri Oct  8 14:11:57 2021] Launched synth_1... Run output will be captured here: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/runme.log [Fri Oct  8 14:11:57 2021] Launched impl_1... Run output will be captured here: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// aj (cr): Synthesis Failed: addNotify
+// Elapsed time: 198 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // aj (cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-1031] we_bram1 is not declared [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:465]. ]", 2, false); // ah (O, cr)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v;-;;-;16;-;line;-;465;-;;-;16;-;"); // ah (O, cr)
+selectCodeEditor("main.v", 229, 128); // ch (w, cr)
+selectCodeEditor("main.v", 229, 128, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("main.v", 229, 128); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): No Implementation Results Available: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 2,264 MB. GUI used memory: 83 MB. Current time: 10/8/21, 2:15:28 PM CDT
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+dismissDialog("No Implementation Results Available"); // A (cr)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cr): Launch Runs: addNotify
+selectCheckBox(PAResourceItoN.LaunchPanel_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", true); // g (a, f): TRUE
+selectCheckBox(PAResourceItoN.LaunchPanel_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", true); // g (a, f): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 4 seconds
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 16 
+// Tcl Message: [Fri Oct  8 14:15:33 2021] Launched synth_1... Run output will be captured here: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/runme.log [Fri Oct  8 14:15:33 2021] Launched impl_1... Run output will be captured here: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 168 seconds
+selectCodeEditor("main.v", 275, 241); // ch (w, cr)
+// Elapsed time: 128 seconds
+selectCodeEditor("main.v", 399, 178); // ch (w, cr)
+selectCodeEditor("main.v", 33, 206); // ch (w, cr)
+selectCodeEditor("main.v", 32, 186); // ch (w, cr)
+selectCodeEditor("main.v", 32, 198); // ch (w, cr)
+typeControlKey(null, null, 'z');
+// Elapsed time: 20 seconds
+selectCodeEditor("main.v", 260, 199); // ch (w, cr)
+selectCodeEditor("main.v", 242, 118); // ch (w, cr)
+// Elapsed time: 243 seconds
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aL (aI, cr)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// aj (cr): Bitstream Generation Completed: addNotify
+// Elapsed time: 23 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (aj)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (aj)
+dismissDialog("Bitstream Generation Completed"); // aj (cr)
+// Elapsed time: 566 seconds
+selectCodeEditor("main.v", 404, 110); // ch (w, cr)
+// Elapsed time: 37 seconds
+selectCodeEditor("main.v", 58, 125); // ch (w, cr)
+// Elapsed time: 492 seconds
+selectCodeEditor("main.v", 194, 170); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,218 MB. GUI used memory: 83 MB. Current time: 10/8/21, 2:45:33 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,218 MB. GUI used memory: 82 MB. Current time: 10/8/21, 3:15:33 PM CDT

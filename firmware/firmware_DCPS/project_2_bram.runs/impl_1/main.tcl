@@ -60,12 +60,18 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 4
+  set_param power.BramSDPPropagationFix 1
+  set_param power.enableUnconnectedCarry8PinPower 1
+  set_param power.enableCarry8RouteBelPower 1
+  set_param power.enableLutRouteBelPower 1
   create_project -in_memory -part xczu2cg-sfvc784-1-e
   set_property board_part trenz.biz:te0820_2cg_1e:part0:2.0 [current_project]
   set_property design_mode GateLvl [current_fileset]

@@ -139,6 +139,7 @@ module main(
     );
     
 
+    reg [7:0] FIRMWARE_VER = 8'd24 ;// divide by 10 to get the firmware version
     // Bypassing SPI to DCPS
     OBUFDS OBUFDS_MEZZ_PAGE0(.I(DAT0),.O(MEZZ_PAGE0_P),.OB(MEZZ_PAGE0_N));
     OBUFDS OBUFDS_MEZZ_PAGE1(.I(DAT1),.O(MEZZ_PAGE1_P),.OB(MEZZ_PAGE1_N));
@@ -327,8 +328,9 @@ module main(
   wire [(DATA_WIDTH*NUM_DDMTD/8)-1 : 0] TSTRB;
   wire TLAST;
   wire TVALID;
-  reg TREADY;
+  reg  TREADY;
   wire TCLK;
+  wire [NUM_DDMTD-1:0] PROG_FULL;
   
   wire RESETN;
   
@@ -386,7 +388,8 @@ module main(
      .M_AXIS_TSTRB(TSTRB),
      .M_AXIS_TLAST(TLAST),
      .M_AXIS_TREADY(TREADY),
-     .WORDS_TO_SEND(WORDS_TO_SEND)
+     .WORDS_TO_SEND(WORDS_TO_SEND),
+     .PROG_FULL(PROG_FULL)
  );
 
 
@@ -411,6 +414,10 @@ module main(
   
 
 
+
+  reg enable_bram1 = 0; //used to write information to SOC
+
+
   always @(negedge CLK)
   begin
 
@@ -420,14 +427,16 @@ module main(
     word_counter <=0;
     we_byte <=0;
     WORDS_TO_SEND <=BRAM_PORTB_0_dout;
-    TREADY<=0; 
+    TREADY<=0;
+    enable_bram1 <= 1;
   end
+  
   else if(GPIO[1] & (word_counter<WORDS_TO_SEND))
     begin
+      enable_bram1 <= 0;
       TREADY<=1; //TREADY
       // data <= {word_counter,32'd5,32'd4,32'd3,32'd2,32'd1,WORDS_TO_SEND,TDATA[31:0]};
       data <= TDATA;
-
       addr_pointer <= addr_pointer + NUM_BYTES;
       word_counter <=word_counter +1;
       we_byte<={(NUM_BYTES){1'b1}};
@@ -446,21 +455,40 @@ module main(
 
 
 
-  //Erich suggested changes
+  //Test Counter...
+  reg [31:0] clk_counter = 0;
+  always @(posedge CLK) begin
+    clk_counter <= clk_counter +1;
+  end
+
+  //Syncing data before going into the bram
   reg addr_pointer_sync;
   reg [DATA_WIDTH*NUM_DDMTD-1:0] BRAM_PORTB_0_data;
   reg [DATA_WIDTH*NUM_DDMTD-1:0] BRAM_PORTB_1_data;
   reg [DATA_WIDTH*NUM_DDMTD-1:0] BRAM_PORTB_2_data;
   reg [NUM_BYTES-1:0] we_byte_sync;
+  reg [NUM_BYTES-1:0] we_byte_bram1_sync;
 
 
   always @(negedge CLK)
   begin
-    we_byte_sync <= we_byte;
-    addr_pointer_sync <= addr_pointer;
-    BRAM_PORTB_0_data <= data[255:0];
-    BRAM_PORTB_1_data <= data[511:256];
-    BRAM_PORTB_2_data <= data[767:512];
+
+    if (enable_bram1)
+    begin
+      BRAM_PORTB_1_data <= {internal_reset,clk_counter,FIRMWARE_VER,PROG_FULL} ;
+      we_byte_bram1_sync <= {(NUM_BYTES){1'b1}};
+      addr_pointer_sync <= 0;
+
+    end
+    else
+    begin
+      addr_pointer_sync <= addr_pointer;
+      we_byte_sync <= we_byte;
+      we_byte_bram1_sync <= we_byte;
+      BRAM_PORTB_0_data <= data[255:0];
+      BRAM_PORTB_1_data <= data[511:256];
+      BRAM_PORTB_2_data <= data[767:512];
+    end
 
   end
 
@@ -483,7 +511,7 @@ design_1_wrapper desing_ins
     .BRAM_PORTB_1_din(BRAM_PORTB_1_data),
     // .BRAM_PORTB_1_dout(BRAM_PORTB_0_dout),
     .BRAM_PORTB_1_en(1),
-    .BRAM_PORTB_1_we(we_byte_sync),
+    .BRAM_PORTB_1_we(we_byte_bram1_sync),
 
 
 

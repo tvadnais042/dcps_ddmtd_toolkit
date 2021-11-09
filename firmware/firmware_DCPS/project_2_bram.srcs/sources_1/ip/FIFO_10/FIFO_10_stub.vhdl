@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Wed Jan 13 19:11:50 2021
+-- Date        : Wed Jan 13 19:11:49 2021
 -- Host        : havi running 64-bit Pop!_OS 20.10
--- Command     : write_vhdl -force -mode synth_stub
---               /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/ip/FIFO_10/FIFO_10_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top FIFO_10 -prefix
+--               FIFO_10_ FIFO_10_stub.vhdl
 -- Design      : FIFO_10
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu2cg-sfvc784-1-e

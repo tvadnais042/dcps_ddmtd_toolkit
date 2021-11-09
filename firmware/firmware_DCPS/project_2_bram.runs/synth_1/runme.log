@@ -12,16 +12,16 @@ source main.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/rsaradhy/Software/Vivado/Vivado/2019.2/data/ip'.
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1445.242 ; gain = 0.000 ; free physical = 190 ; free virtual = 7177
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1462.562 ; gain = 0.000 ; free physical = 706 ; free virtual = 9055
 Command: synth_design -top main -part xczu2cg-sfvc784-1-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu2cg'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu2cg'
 INFO: [Device 21-403] Loading part xczu2cg-sfvc784-1-e
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12557 
+INFO: Helper process launched with PID 490568 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2285.609 ; gain = 0.000 ; free physical = 212 ; free virtual = 6195
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2285.680 ; gain = 0.000 ; free physical = 217 ; free virtual = 8163
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'main' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:23]
 	Parameter RESET_COUNT bound to: 1000000 - type: integer 
@@ -66,50 +66,49 @@ INFO: [Synth 8-6157] synthesizing module 'DDMTD_Array' [/home/rsaradhy/Work/tren
 INFO: [Synth 8-6157] synthesizing module 'DDMTD_Sampler' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:23]
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_START_COUNT bound to: 32 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'FIFO_10' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/FIFO_10_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'FIFO_10' (6#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/FIFO_10_stub.v:6]
-WARNING: [Synth 8-7023] instance 'FIFO_10_inst' of module 'FIFO_10' has 13 connections declared, but only 11 given [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:247]
-WARNING: [Synth 8-6014] Unused sequential element sampleGeneratorEnR_reg was removed.  [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:116]
-WARNING: [Synth 8-6014] Unused sequential element afterResetCycleCounterR_reg was removed.  [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:117]
+INFO: [Synth 8-6157] synthesizing module 'FIFO_10' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/FIFO_10_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'FIFO_10' (6#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/FIFO_10_stub.v:6]
+WARNING: [Synth 8-7023] instance 'FIFO_10_inst' of module 'FIFO_10' has 13 connections declared, but only 11 given [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:248]
+WARNING: [Synth 8-6014] Unused sequential element sampleGeneratorEnR_reg was removed.  [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:117]
+WARNING: [Synth 8-6014] Unused sequential element afterResetCycleCounterR_reg was removed.  [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:118]
 INFO: [Synth 8-6155] done synthesizing module 'DDMTD_Sampler' (7#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'DDMTD_Array' (8#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Array.v:23]
-WARNING: [Synth 8-689] width (32) of port connection 'WORDS_TO_SEND' does not match port width (1) of module 'DDMTD_Array' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:389]
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_0_11' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_bram_ctrl_0_11_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_0_11' (9#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_bram_ctrl_0_11_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_0_bram_7' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_bram_ctrl_0_bram_7_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_0_bram_7' (10#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_bram_ctrl_0_bram_7_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_0_11' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_bram_ctrl_0_11_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_0_11' (9#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_bram_ctrl_0_11_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_0_bram_7' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_bram_ctrl_0_bram_7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_0_bram_7' (10#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_bram_ctrl_0_bram_7_stub.v:6]
 WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_0_bram' of module 'design_1_axi_bram_ctrl_0_bram_7' has 16 connections declared, but only 14 given [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/bd/design_1/synth/design_1.v:323]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_0_bram_8' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_bram_ctrl_0_bram_8_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_0_bram_8' (11#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_bram_ctrl_0_bram_8_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_0_bram_8' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_bram_ctrl_0_bram_8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_0_bram_8' (11#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_bram_ctrl_0_bram_8_stub.v:6]
 WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_0_bram1' of module 'design_1_axi_bram_ctrl_0_bram_8' has 16 connections declared, but only 14 given [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/bd/design_1/synth/design_1.v:338]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_0_bram1_0' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_bram_ctrl_0_bram1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_0_bram1_0' (12#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_bram_ctrl_0_bram1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_0_bram1_0' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_bram_ctrl_0_bram1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_0_bram1_0' (12#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_bram_ctrl_0_bram1_0_stub.v:6]
 WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_0_bram2' of module 'design_1_axi_bram_ctrl_0_bram1_0' has 16 connections declared, but only 14 given [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/bd/design_1/synth/design_1.v:353]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_0_12' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_bram_ctrl_0_12_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_0_12' (13#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_bram_ctrl_0_12_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_1_0' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_bram_ctrl_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_1_0' (14#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_bram_ctrl_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (15#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_1' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_smc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_1' (16#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_axi_smc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_0_12' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_bram_ctrl_0_12_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_0_12' (13#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_bram_ctrl_0_12_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_1_0' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_bram_ctrl_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_1_0' (14#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_bram_ctrl_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (15#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_1' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_smc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_1' (16#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_axi_smc_1_stub.v:6]
 WARNING: [Synth 8-7023] instance 'axi_smc' of module 'design_1_axi_smc_1' has 165 connections declared, but only 151 given [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/bd/design_1/synth/design_1.v:471]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_200M_0' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_rst_ps8_0_200M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_200M_0' (17#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_rst_ps8_0_200M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_200M_0' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_rst_ps8_0_200M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_200M_0' (17#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_rst_ps8_0_200M_0_stub.v:6]
 WARNING: [Synth 8-7023] instance 'rst_ps8_0_200M' of module 'design_1_rst_ps8_0_200M_0' has 10 connections declared, but only 6 given [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/bd/design_1/synth/design_1.v:623]
-INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_1' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_zynq_ultra_ps_e_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_1' (18#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-12405-havi/realtime/design_1_zynq_ultra_ps_e_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_1' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_zynq_ultra_ps_e_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_1' (18#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/.Xil/Vivado-490525-havi/realtime/design_1_zynq_ultra_ps_e_0_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (19#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (20#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
-WARNING: [Synth 8-689] width (768) of port connection 'BRAM_PORTB_0_din' does not match port width (256) of module 'design_1_wrapper' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:473]
-WARNING: [Synth 8-689] width (768) of port connection 'BRAM_PORTB_0_dout' does not match port width (256) of module 'design_1_wrapper' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:474]
-WARNING: [Synth 8-689] width (768) of port connection 'BRAM_PORTB_1_din' does not match port width (256) of module 'design_1_wrapper' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:483]
-WARNING: [Synth 8-689] width (768) of port connection 'BRAM_PORTB_2_din' does not match port width (256) of module 'design_1_wrapper' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:492]
-WARNING: [Synth 8-7023] instance 'desing_ins' of module 'design_1_wrapper' has 24 connections declared, but only 19 given [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:468]
-WARNING: [Synth 8-6014] Unused sequential element beat_1_q1_reg was removed.  [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:253]
-WARNING: [Synth 8-6014] Unused sequential element addr_pointer_sync_reg was removed.  [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:460]
+WARNING: [Synth 8-689] width (768) of port connection 'BRAM_PORTB_0_din' does not match port width (256) of module 'design_1_wrapper' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:501]
+WARNING: [Synth 8-689] width (768) of port connection 'BRAM_PORTB_0_dout' does not match port width (256) of module 'design_1_wrapper' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:502]
+WARNING: [Synth 8-689] width (768) of port connection 'BRAM_PORTB_1_din' does not match port width (256) of module 'design_1_wrapper' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:511]
+WARNING: [Synth 8-689] width (768) of port connection 'BRAM_PORTB_2_din' does not match port width (256) of module 'design_1_wrapper' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:520]
+WARNING: [Synth 8-7023] instance 'desing_ins' of module 'design_1_wrapper' has 24 connections declared, but only 19 given [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:496]
+WARNING: [Synth 8-6014] Unused sequential element beat_1_q1_reg was removed.  [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:254]
+WARNING: [Synth 8-6014] Unused sequential element addr_pointer_sync_reg was removed.  [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:480]
 INFO: [Synth 8-6155] done synthesizing module 'main' (21#1) [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:23]
 WARNING: [Synth 8-3331] design design_1 has unconnected port CLK_IN
 WARNING: [Synth 8-3331] design DDMTD_Sampler has unconnected port external_counter[31]
@@ -147,7 +146,7 @@ WARNING: [Synth 8-3331] design DDMTD_Sampler has unconnected port WORDS_TO_SEND[
 WARNING: [Synth 8-3331] design DDMTD_Sampler has unconnected port WORDS_TO_SEND[1]
 WARNING: [Synth 8-3331] design DDMTD_Sampler has unconnected port WORDS_TO_SEND[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2340.422 ; gain = 54.812 ; free physical = 259 ; free virtual = 6219
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2340.492 ; gain = 54.812 ; free physical = 241 ; free virtual = 8189
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -160,12 +159,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2344.391 ; gain = 58.781 ; free physical = 258 ; free virtual = 6221
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2346.430 ; gain = 60.750 ; free physical = 241 ; free virtual = 8189
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2344.391 ; gain = 58.781 ; free physical = 258 ; free virtual = 6221
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2346.430 ; gain = 60.750 ; free physical = 241 ; free virtual = 8189
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2361.297 ; gain = 0.000 ; free physical = 247 ; free virtual = 6208
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2357.336 ; gain = 0.000 ; free physical = 233 ; free virtual = 8180
 INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -241,6 +240,7 @@ Finished Parsing XDC File [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/proj
 Parsing XDC File [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/FIFO_10_inst'
 Finished Parsing XDC File [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/FIFO_10_inst'
 Parsing XDC File [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/constrs_1/imports/new/main.xdc]
+WARNING: [Vivado 12-2489] -waveform contains time 1.562500 which will be rounded to 1.563 to ensure it is an integer multiple of 1 picosecond [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/constrs_1/imports/new/main.xdc:300]
 Finished Parsing XDC File [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/constrs_1/imports/new/main.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/constrs_1/imports/new/main.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
@@ -248,20 +248,44 @@ Parsing XDC File [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bra
 Finished Parsing XDC File [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2983.648 ; gain = 0.000 ; free physical = 162 ; free virtual = 5686
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2986.656 ; gain = 0.000 ; free physical = 157 ; free virtual = 7653
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 23 instances were transformed.
   IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 14 instances
   IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
   OBUFDS => OBUFDS: 8 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2983.648 ; gain = 0.000 ; free physical = 161 ; free virtual = 5685
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2986.656 ; gain = 0.000 ; free physical = 157 ; free virtual = 7653
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[0].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[10].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[11].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[14].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[16].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[18].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[1].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[20].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[21].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[2].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[4].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[5].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[6].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[7].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[8].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.250' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[9].DDMTD_i/FIFO_10_inst' at clock pin 'wr_clk' is different from the actual clock period '3.125', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'desing_ins/design_1_i/axi_bram_ctrl_0_bram' at clock pin 'clka' is different from the actual clock period '6.250', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'desing_ins/design_1_i/axi_bram_ctrl_0_bram1' at clock pin 'clka' is different from the actual clock period '6.250', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'desing_ins/design_1_i/axi_bram_ctrl_0_bram2' at clock pin 'clka' is different from the actual clock period '6.250', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'desing_ins/design_1_i/axi_gpio_0' at clock pin 's_axi_aclk' is different from the actual clock period '6.250', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:00:57 . Memory (MB): peak = 2990.586 ; gain = 704.977 ; free physical = 201 ; free virtual = 5741
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 2992.594 ; gain = 706.914 ; free physical = 241 ; free virtual = 7738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -269,7 +293,7 @@ Start Loading Part and Timing Information
 Loading part: xczu2cg-sfvc784-1-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:57 . Memory (MB): peak = 2990.586 ; gain = 704.977 ; free physical = 201 ; free virtual = 5741
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 2992.594 ; gain = 706.914 ; free physical = 241 ; free virtual = 7738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -310,10 +334,10 @@ Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[21].DDMT
 Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[22].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[23].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:57 . Memory (MB): peak = 2990.586 ; gain = 704.977 ; free physical = 200 ; free virtual = 5739
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 2992.594 ; gain = 706.914 ; free physical = 241 ; free virtual = 7738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:58 . Memory (MB): peak = 2990.586 ; gain = 704.977 ; free physical = 191 ; free virtual = 5732
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 2992.594 ; gain = 706.914 ; free physical = 234 ; free virtual = 7732
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -329,12 +353,13 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 5     
 +---Registers : 
 	              768 Bit    Registers := 4     
-	               32 Bit    Registers := 56    
-	                1 Bit    Registers := 124   
+	               32 Bit    Registers := 57    
+	                1 Bit    Registers := 125   
 +---Muxes : 
+	   2 Input    768 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 3     
 	   3 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -348,12 +373,13 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 5     
 +---Registers : 
 	              768 Bit    Registers := 4     
-	               32 Bit    Registers := 8     
-	                1 Bit    Registers := 4     
+	               32 Bit    Registers := 9     
+	                1 Bit    Registers := 5     
 +---Muxes : 
+	   2 Input    768 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 3     
 	   3 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 Module DDMTD_Sampler__xdcDup__1 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -490,32 +516,55 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[14].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:100]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:100]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[16].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:100]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:100]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[18].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:100]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:100]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[20].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:100]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[21].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:100]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:100]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:100]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[14].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:232]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:232]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[16].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:232]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:232]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[18].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:232]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:232]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[20].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:232]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[21].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:232]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:232]
-INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:232]
-WARNING: [Synth 8-3936] Found unconnected internal register 'BRAM_PORTB_2_data_reg' and it is trimmed from '768' to '256' bits. [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:463]
-WARNING: [Synth 8-3936] Found unconnected internal register 'BRAM_PORTB_1_data_reg' and it is trimmed from '768' to '256' bits. [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:462]
-WARNING: [Synth 8-3936] Found unconnected internal register 'BRAM_PORTB_0_data_reg' and it is trimmed from '768' to '256' bits. [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:461]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[1].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[2].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[3].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[4].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[5].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[6].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[7].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[8].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[9].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[10].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[11].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[12].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[13].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[14].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[15].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[16].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[17].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[18].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[19].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[20].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[21].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[22].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'ddmtd_inst[23].DDMTD_i/read_en_sync_reg' into 'ddmtd_inst[0].DDMTD_i/read_en_sync_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:242]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[14].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:101]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:101]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[16].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:101]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:101]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[18].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:101]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:101]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[20].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:101]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[21].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:101]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:101]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/beat_edge_reg' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/beat_edge_reg' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:101]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[14].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:233]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:233]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[16].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:233]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:233]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[18].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:233]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:233]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[20].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:233]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[21].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:233]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:233]
+INFO: [Synth 8-4471] merging register 'DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/DATA_IN_SYNC_reg[31:0]' into 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/DATA_IN_SYNC_reg[31:0]' [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/imports/new/DDMTD_Sampler.v:233]
+WARNING: [Synth 8-3936] Found unconnected internal register 'BRAM_PORTB_2_data_reg' and it is trimmed from '768' to '256' bits. [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:490]
+WARNING: [Synth 8-3936] Found unconnected internal register 'BRAM_PORTB_1_data_reg' and it is trimmed from '768' to '256' bits. [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:478]
+WARNING: [Synth 8-3936] Found unconnected internal register 'BRAM_PORTB_0_data_reg' and it is trimmed from '768' to '256' bits. [/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.srcs/sources_1/new/main.v:488]
 WARNING: [Synth 8-3331] design design_1 has unconnected port CLK_IN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 2990.586 ; gain = 704.977 ; free physical = 177 ; free virtual = 5724
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:45 . Memory (MB): peak = 2992.594 ; gain = 706.914 ; free physical = 217 ; free virtual = 7720
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -527,13 +576,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:01:09 . Memory (MB): peak = 2990.586 ; gain = 704.977 ; free physical = 171 ; free virtual = 5525
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 2992.594 ; gain = 706.914 ; free physical = 155 ; free virtual = 7525
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:10 . Memory (MB): peak = 2992.586 ; gain = 706.977 ; free physical = 164 ; free virtual = 5503
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 3000.609 ; gain = 714.930 ; free physical = 163 ; free virtual = 7518
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -545,7 +594,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:01:11 . Memory (MB): peak = 3004.539 ; gain = 718.930 ; free physical = 265 ; free virtual = 5588
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:53 . Memory (MB): peak = 3008.617 ; gain = 722.938 ; free physical = 168 ; free virtual = 7516
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -572,13 +621,13 @@ WARNING: [Synth 8-3295] tying undriven pin desing_ins/design_1_i:BRAM_PORTB_0_rs
 WARNING: [Synth 8-3295] tying undriven pin desing_ins/design_1_i:BRAM_PORTB_1_rst to constant 0
 WARNING: [Synth 8-3295] tying undriven pin desing_ins/design_1_i:BRAM_PORTB_2_rst to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:01:14 . Memory (MB): peak = 3010.477 ; gain = 724.867 ; free physical = 256 ; free virtual = 5580
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 3012.586 ; gain = 726.906 ; free physical = 167 ; free virtual = 7515
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:01:14 . Memory (MB): peak = 3010.477 ; gain = 724.867 ; free physical = 255 ; free virtual = 5579
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 3012.586 ; gain = 726.906 ; free physical = 168 ; free virtual = 7516
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -597,25 +646,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:01:14 . Memory (MB): peak = 3010.477 ; gain = 724.867 ; free physical = 254 ; free virtual = 5579
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 3012.586 ; gain = 726.906 ; free physical = 168 ; free virtual = 7516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:01:14 . Memory (MB): peak = 3010.477 ; gain = 724.867 ; free physical = 254 ; free virtual = 5579
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 3012.586 ; gain = 726.906 ; free physical = 168 ; free virtual = 7516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:01:15 . Memory (MB): peak = 3010.477 ; gain = 724.867 ; free physical = 254 ; free virtual = 5578
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 3012.586 ; gain = 726.906 ; free physical = 168 ; free virtual = 7516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:01:15 . Memory (MB): peak = 3010.477 ; gain = 724.867 ; free physical = 253 ; free virtual = 5577
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 3012.586 ; gain = 726.906 ; free physical = 168 ; free virtual = 7516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -677,28 +726,29 @@ Report Cell Usage:
 |33    |design_1_rst_ps8_0_200M_0        |     1|
 |34    |design_1_zynq_ultra_ps_e_0_1     |     1|
 |35    |BUFG                             |     1|
-|36    |CARRY8                           |    24|
+|36    |CARRY8                           |    28|
 |37    |IDDRE1                           |    14|
-|38    |LUT1                             |     8|
-|39    |LUT2                             |    66|
-|40    |LUT3                             |    43|
+|38    |LUT1                             |     9|
+|39    |LUT2                             |    68|
+|40    |LUT3                             |   100|
 |41    |LUT4                             |    39|
 |42    |LUT5                             |     8|
 |43    |LUT6                             |    17|
-|44    |FDRE                             |  3116|
-|45    |IBUF                             |     7|
-|46    |IBUFDS                           |    14|
-|47    |IBUFGDS                          |     1|
-|48    |OBUFDS                           |     8|
+|44    |FDRE                             |  3123|
+|45    |FDSE                             |    35|
+|46    |IBUF                             |     7|
+|47    |IBUFDS                           |    14|
+|48    |IBUFGDS                          |     1|
+|49    |OBUFDS                           |     8|
 +------+---------------------------------+------+
 
 Report Instance Areas: 
 +------+-----------------------------+--------------------------+------+
 |      |Instance                     |Module                    |Cells |
 +------+-----------------------------+--------------------------+------+
-|1     |top                          |                          |  9413|
-|2     |  DDMTD_Array_inst           |DDMTD_Array               |  2275|
-|3     |    \ddmtd_inst[0].DDMTD_i   |DDMTD_Sampler__xdcDup__1  |   108|
+|1     |top                          |                          |  9519|
+|2     |  DDMTD_Array_inst           |DDMTD_Array               |  2276|
+|3     |    \ddmtd_inst[0].DDMTD_i   |DDMTD_Sampler__xdcDup__1  |   110|
 |4     |    \ddmtd_inst[10].DDMTD_i  |DDMTD_Sampler__xdcDup__11 |   108|
 |5     |    \ddmtd_inst[11].DDMTD_i  |DDMTD_Sampler__xdcDup__12 |   108|
 |6     |    \ddmtd_inst[12].DDMTD_i  |DDMTD_Sampler__xdcDup__13 |   108|
@@ -713,7 +763,7 @@ Report Instance Areas:
 |15    |    \ddmtd_inst[20].DDMTD_i  |DDMTD_Sampler__xdcDup__21 |    76|
 |16    |    \ddmtd_inst[21].DDMTD_i  |DDMTD_Sampler__xdcDup__22 |    76|
 |17    |    \ddmtd_inst[22].DDMTD_i  |DDMTD_Sampler__xdcDup__23 |    76|
-|18    |    \ddmtd_inst[23].DDMTD_i  |DDMTD_Sampler             |    78|
+|18    |    \ddmtd_inst[23].DDMTD_i  |DDMTD_Sampler             |    77|
 |19    |    \ddmtd_inst[2].DDMTD_i   |DDMTD_Sampler__xdcDup__3  |   108|
 |20    |    \ddmtd_inst[3].DDMTD_i   |DDMTD_Sampler__xdcDup__4  |   108|
 |21    |    \ddmtd_inst[4].DDMTD_i   |DDMTD_Sampler__xdcDup__5  |   108|
@@ -740,18 +790,18 @@ Report Instance Areas:
 |42    |  sync_CQ3                   |sync_ddr_12               |     2|
 +------+-----------------------------+--------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:01:15 . Memory (MB): peak = 3010.477 ; gain = 724.867 ; free physical = 253 ; free virtual = 5577
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 3012.586 ; gain = 726.906 ; free physical = 168 ; free virtual = 7516
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 3010.477 ; gain = 78.672 ; free physical = 288 ; free virtual = 5613
-Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:01:15 . Memory (MB): peak = 3010.484 ; gain = 724.867 ; free physical = 288 ; free virtual = 5613
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 3012.586 ; gain = 80.742 ; free physical = 205 ; free virtual = 7553
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 3012.594 ; gain = 726.906 ; free physical = 205 ; free virtual = 7553
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3010.484 ; gain = 0.000 ; free physical = 342 ; free virtual = 5672
-INFO: [Netlist 29-17] Analyzing 55 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3012.594 ; gain = 0.000 ; free physical = 269 ; free virtual = 7617
+INFO: [Netlist 29-17] Analyzing 59 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3071.242 ; gain = 0.000 ; free physical = 289 ; free virtual = 5617
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3072.352 ; gain = 0.000 ; free physical = 211 ; free virtual = 7559
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 31 instances were transformed.
   BUFG => BUFGCE: 1 instance 
@@ -761,12 +811,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF(x2)): 8 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-80 Infos, 63 Warnings, 0 Critical Warnings and 0 Errors encountered.
+103 Infos, 87 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:35 . Memory (MB): peak = 3071.242 ; gain = 1626.000 ; free physical = 422 ; free virtual = 5750
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3071.242 ; gain = 0.000 ; free physical = 422 ; free virtual = 5750
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:01:12 . Memory (MB): peak = 3072.352 ; gain = 1609.789 ; free physical = 343 ; free virtual = 7691
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3072.352 ; gain = 0.000 ; free physical = 343 ; free virtual = 7691
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Aug  9 17:19:09 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 12 00:43:47 2021...

@@ -48,15 +48,16 @@ module DDMTD_Sampler
     output wire  M_AXIS_TLAST,
     // TREADY indicates that the slave can accept a transfer in the current cycle.
     input wire  M_AXIS_TREADY,
-
     input wire enable_read_logic,
-    input wire [31:0] WORDS_TO_SEND
+    input wire [31:0] WORDS_TO_SEND,
+
+    output wire prog_full
 
  );
 
 wire full,empty;
 wire prog_empty;
-wire prog_full;
+// wire prog_full;
 
 
 

@@ -18,6 +18,12 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 4
+set_param power.BramSDPPropagationFix 1
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableLutRouteBelPower 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xczu2cg-sfvc784-1-e
 
 set_param project.singleFileAddWarning.threshold 0

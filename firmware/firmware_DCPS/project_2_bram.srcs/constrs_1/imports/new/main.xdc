@@ -297,5 +297,5 @@ set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 
 
 
-create_clock -period 6.250 -name CLK_REF_P -waveform {0.000 3.125} [get_ports CLK_REF_P]
+create_clock -period 3.125 -name CLK_REF_P -waveform {0.000 1.5625} [get_ports CLK_REF_P]
 

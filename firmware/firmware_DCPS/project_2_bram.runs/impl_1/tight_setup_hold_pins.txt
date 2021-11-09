@@ -1,0 +1,44 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|                CLK_REF_P |                CLK_REF_P |                                                                               enable_sampling_logic_reg/D|
+|                CLK_REF_P |                CLK_REF_P |                                                                                      internal_reset_reg/D|
+|                CLK_REF_P |                CLK_REF_P |                                                                            internal_reset_reg_replica_2/D|
+|                CLK_REF_P |                CLK_REF_P |                                                                            internal_reset_reg_replica_5/D|
+|                CLK_REF_P |                CLK_REF_P |                                                                            internal_reset_reg_replica_1/D|
+|                CLK_REF_P |                CLK_REF_P |                                                                              internal_reset_reg_replica/D|
+|                CLK_REF_P |                CLK_REF_P |                                                                            internal_reset_reg_replica_4/D|
+|                CLK_REF_P |                CLK_REF_P |                                                                            internal_reset_reg_replica_3/D|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[27]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[26]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[25]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[24]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[31]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[30]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[29]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[28]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[19]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[18]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[17]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[16]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[11]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                    reset_counter_reg[8]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[10]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                    reset_counter_reg[9]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[23]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[22]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[21]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[20]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[15]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[14]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[13]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                   reset_counter_reg[12]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                    reset_counter_reg[3]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                    reset_counter_reg[0]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                    reset_counter_reg[1]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                    reset_counter_reg[2]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                    reset_counter_reg[4]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                    reset_counter_reg[5]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                    reset_counter_reg[6]/R|
+|                CLK_REF_P |                CLK_REF_P |                                                                                    reset_counter_reg[7]/R|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

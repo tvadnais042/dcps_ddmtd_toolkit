@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Aug  9 17:12:07 2021
-# Process ID: 10745
+# Start of session at: Mon Aug  9 21:46:36 2021
+# Process ID: 3935
 # Current directory: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/log_files
 # Command line: vivado ../project_2_bram.xpr
 # Log file: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/log_files/vivado.log
@@ -11,29 +11,9 @@
 #-----------------------------------------------------------
 start_gui
 open_project ../project_2_bram.xpr
-INFO: [Project 1-313] Project file moved from '/home/rsaradhy/Work/trenz/vivado/project_2_bram' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/rsaradhy/Software/Vivado/Vivado/2019.2/data/ip'.
-open_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:14 . Memory (MB): peak = 6624.203 ; gain = 131.895 ; free physical = 1792 ; free virtual = 9737
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Mon Aug  9 17:16:31 2021] Launched synth_1...
-Run output will be captured here: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/runme.log
-[Mon Aug  9 17:16:32 2021] Launched impl_1...
-Run output will be captured here: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Mon Aug  9 17:17:14 2021] Launched synth_1...
-Run output will be captured here: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/synth_1/runme.log
-[Mon Aug  9 17:17:14 2021] Launched impl_1...
-Run output will be captured here: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/project_2_bram.runs/impl_1/runme.log
-write_hw_platform -fixed -force  -include_bit -file /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/main.xsa
-INFO: [Vivado 12-4895] Creating Hardware Platform: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/main.xsa ...
-INFO: [Hsi 55-2053] elapsed time for repository (/home/rsaradhy/Software/Vivado/Vivado/2019.2/data/embeddedsw) loading 0 seconds
-INFO: [Vivado 12-4896] Successfully created Hardware Platform: /home/rsaradhy/Work/trenz/firmware/firmware_DCPS/main.xsa
-write_hw_platform: Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 6904.336 ; gain = 0.000 ; free physical = 3252 ; free virtual = 7670
-exit
-INFO: [Common 17-206] Exiting Vivado at Mon Aug  9 17:28:42 2021...
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:10 . Memory (MB): peak = 6630.754 ; gain = 123.355 ; free physical = 10484 ; free virtual = 13334
