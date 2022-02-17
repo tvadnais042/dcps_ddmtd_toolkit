@@ -1,0 +1,48 @@
+Notes on how to SSH into GBT_SCA Raspberry Pi
+----------------------------------------------
+
+As the Raspberry Pi(RPi) boots it will create a wifi named GBT_SCA_Wifi. Wait sometime for the RPi to boot(Even after the SSID shows up in the Wifi List)
+
+
+Login to GBT_SCA_Wifi using the password tHMpCE`J
+
+Once logged in you can ssh into the system using 
+
+ssh pi@192.168.4.1
+
+Username : pi
+Password : Rasp-Berry-!2#
+
+
+For Flashing Firmware (After you ssh into GBT_SCA RPi)
+----------------------------------------------
+
+cd Flash_Firmware
+./compile
+sudo ./NexFlash.exe < *HEX_File*
+
+where *HEX_File* is the Hex file that you want to flash to the Nexys Video Memory
+
+
+
+Firmwares Available in folder ~/Flash_Firmware/HEX_Files/ :
+
+2018_8_27_GBT_SCA_Comm_v1.hex --> for testing GBT_SCA; capable of sending packets
+
+2018_8_9_RCB_LedTest_Nex1.hex --> for testing connections in the board
+
+
+
+Note: You need to power cycle (or click "PROG" button)  Nexys board for the firmware to load
+
+
+Things in the works:
+
+Flash 2018_8_27_GBT_SCA_Comm_v1 and:
+
+--> Use GBT_SCA.c to set pattern through the Remote SCA Board
+
+--> Use sca_blink.c to make the led on GBT SCA blink. (still needs some packet modifications)
+
+
+
