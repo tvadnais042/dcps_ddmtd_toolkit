@@ -122,7 +122,7 @@ int print_16Words(void* virtual_address, int byte_count)
     for (offset = 0; offset < byte_count; offset=offset+word_byte) {
         val1 = (uint64_t)(0xffffffff&((p[3+offset]&0b01111111)<<24|p[2+offset]<<16|p[1+offset]<<8|p[0+offset]));
 
-        if(offset % (4*mod_num) == 0 & (offset != 0) ) {/*if(val1!=0x7fffffff)*/  printf("\n",offset);} //
+        if(offset % (4*mod_num) == 0 & (offset != 0) ) {/*if(val1!=0x7fffffff)*/  printf("\n");} //
 
         // if(1)
         // if(val1!=0x7fffffff)
@@ -206,7 +206,7 @@ char *p = virtual_address;
     // if(val1!=val2)
     {
         
-        fprintf(fp,"%" PRIu64",",((p[3+offset]>>7)&0b1));
+        fprintf(fp,"%" PRIu64",",(long unsigned int)((p[3+offset]>>7)&0b1));
         // fprintf(fp,"%" PRIu64  ,(p[3+offset]&0x7f)<<24|p[2+offset]<<16|p[1+offset]<<8|p[0+offset]);
         fprintf(fp,"%" PRIu64  ,val1);
         if(((offset + word_byte) % (word_byte*mod_num) == 0 )&& (offset != 0)) {/*if(val1!=0x7fffffff)*/  fprintf(fp,"\n");} //
