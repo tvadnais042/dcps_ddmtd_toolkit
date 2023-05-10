@@ -13,7 +13,7 @@ int pins[4]={0,1,2,3};
 int pins_vals[4]={0,0,0,0};
 
 int gpio_init(){
-char *chipname = "gpiochip0";
+char *chipname = "gpiochip3";
 
 	int i, ret,err;
 
@@ -187,22 +187,40 @@ uint bytes_transferred = read_width*num_words/8;
 
 
 
-char* memory_LongStore_1 = (char *)mmap(NULL,LONG_MEM , PROT_READ | PROT_WRITE, MAP_SHARED, mem_fd,0x4a000000); // Memory map destination address
-if(memory_LongStore_1 == (void *) -1) {printf("FATAL LONG MEM"); return 0;};  
-memset(memory_LongStore_1, 0xff, LONG_MEM);
+int num_Bytes = 10000000; //Number of Bytes to reserve in memory
 
-char* memory_LongStore_2 = (char *)mmap(NULL,LONG_MEM , PROT_READ | PROT_WRITE, MAP_SHARED, mem_fd,0x4b000000); // Memory map destination address
-if(memory_LongStore_2 == (void *) -1) {printf("FATAL LONG MEM"); return 0;};  
-memset(memory_LongStore_2, 0xff, LONG_MEM);
+char* memory_LongStore_1 = malloc(num_Bytes);//(char *)mmap(NULL,LONG_MEM , PROT_READ | PROT_WRITE, MAP_SHARED, mem_fd,0x8a000000); // Memory map destination address
+if(memory_LongStore_1 == (void *) -1) {printf("FATAL LONG MEM\n"); return 0;};  
+memset(memory_LongStore_1, 0xff, num_Bytes);
 
-char* memory_LongStore_3 = (char *)mmap(NULL,LONG_MEM , PROT_READ | PROT_WRITE, MAP_SHARED, mem_fd,0x4c000000); // Memory map destination address
-if(memory_LongStore_3 == (void *) -1) {printf("FATAL LONG MEM"); return 0;};  
-memset(memory_LongStore_3, 0xff, LONG_MEM);
+char* memory_LongStore_2 = malloc(num_Bytes);//(char *)mmap(NULL,LONG_MEM , PROT_READ | PROT_WRITE, MAP_SHARED, mem_fd,0x8b000000); // Memory map destination address
+if(memory_LongStore_2 == (void *) -1) {printf("FATAL LONG MEM\n"); return 0;};  
+memset(memory_LongStore_2, 0xff, num_Bytes);
+
+char* memory_LongStore_3 = malloc(num_Bytes);//(char *)mmap(NULL,LONG_MEM , PROT_READ | PROT_WRITE, MAP_SHARED, mem_fd,0x8c000000); // Memory map destination address
+if(memory_LongStore_3 == (void *) -1) {printf("FATAL LONG MEM\n"); return 0;};  
+memset(memory_LongStore_3, 0xff, num_Bytes);
+
+
+// char* memory_LongStore_1 = (char *)mmap(NULL,LONG_MEM , PROT_READ | PROT_WRITE, MAP_SHARED, mem_fd,0x8a000000); // Memory map destination address
+// if(memory_LongStore_1 == (void *) -1) {printf("FATAL LONG MEM\n"); return 0;};  
+// memset(memory_LongStore_1, 0xff, LONG_MEM);
+
+// char* memory_LongStore_2 = (char *)mmap(NULL,LONG_MEM , PROT_READ | PROT_WRITE, MAP_SHARED, mem_fd,0x8b000000); // Memory map destination address
+// if(memory_LongStore_2 == (void *) -1) {printf("FATAL LONG MEM\n"); return 0;};  
+// memset(memory_LongStore_2, 0xff, LONG_MEM);
+
+// char* memory_LongStore_3 = (char *)mmap(NULL,LONG_MEM , PROT_READ | PROT_WRITE, MAP_SHARED, mem_fd,0x8c000000); // Memory map destination address
+// if(memory_LongStore_3 == (void *) -1) {printf("FATAL LONG MEM\n"); return 0;};  
+// memset(memory_LongStore_3, 0xff, LONG_MEM);
 
 
 
 
-unsigned int *bram_addr_1 = mmap(NULL,ADDR_MAP_SIZE , PROT_READ | PROT_WRITE, MAP_SHARED,mem_fd,0x80000000); // Memory map AXI Lite register block
+
+
+
+unsigned int *bram_addr_1 = mmap(NULL,ADDR_MAP_SIZE , PROT_READ | PROT_WRITE, MAP_SHARED,mem_fd,0xa0010000); // Memory map AXI Lite register block
 if(bram_addr_1 == (void *) -1) {printf("FATAL BRAM ADDR"); return 0;};  
 bram_addr_1[0] = num_words; // Number of words to transfer // First addr reserved for fpga settings
 uint *bram_data_addr_1 = bram_addr_1 + read_width/32; //data will be transferred from the Next line
@@ -210,7 +228,7 @@ memset(bram_data_addr_1, 0xff, bytes_transferred); //reset memory
 
 
 
-unsigned int *bram_addr_2 = mmap(NULL,ADDR_MAP_SIZE , PROT_READ | PROT_WRITE, MAP_SHARED,mem_fd,0x82000000 ); // Memory map AXI Lite register block
+unsigned int *bram_addr_2 = mmap(NULL,ADDR_MAP_SIZE , PROT_READ | PROT_WRITE, MAP_SHARED,mem_fd,0xa0018000 ); // Memory map AXI Lite register block
 if(bram_addr_2 == (void *) -1) {printf("FATAL BRAM ADDR"); return 0;};  
 unsigned int *fpga_settings = bram_addr_2;
 firmware_version = 0xff&(fpga_settings[0] >> 24); //first 8 bits is firmware information
@@ -224,12 +242,11 @@ uint *bram_data_addr_2 = bram_addr_2 + read_width/32; //data will be transferred
 memset(bram_data_addr_2, 0xff, bytes_transferred); //reset memory
 
 
-unsigned int *bram_addr_3 = mmap(NULL,ADDR_MAP_SIZE , PROT_READ | PROT_WRITE, MAP_SHARED,mem_fd,0x84000000 ); // Memory map AXI Lite register block
+unsigned int *bram_addr_3 = mmap(NULL,ADDR_MAP_SIZE , PROT_READ | PROT_WRITE, MAP_SHARED,mem_fd,0xa0020000 ); // Memory map AXI Lite register block
 if(bram_addr_3 == (void *) -1) {printf("FATAL BRAM ADDR"); return 0;};  
 // bram_addr_3[0] = num_words; // Number of words to transfer // First addr reserved for fpga settings
 uint *bram_data_addr_3 = bram_addr_3 + read_width/32; //data will be transferred from the Next line
 memset(bram_data_addr_3, 0xff, bytes_transferred); //reset memory
-
 
 
 
@@ -351,8 +368,11 @@ write_toFile( fp3, memory_LongStore_3,total_data_inBytes);
 
 
 
-munmap((void *)memory_LongStore_1,LONG_MEM);
-munmap((void *)bram_addr_1, (size_t)ADDR_MAP_SIZE);
+// munmap((void *)memory_LongStore_1,LONG_MEM);
+// munmap((void *)bram_addr_1, (size_t)ADDR_MAP_SIZE);
+
+
+
 close(mem_fd);
 fclose(fp1);
 fclose(fp2);
