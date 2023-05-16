@@ -151,7 +151,7 @@ double cpu_time_used;
 
 int mem_fd = open("/dev/mem", O_RDWR | O_SYNC); // Open /dev/mem which represents the whole physical memory
 
-
+//Nishant Have data_files folder present, otherwise you will get a segmentation fault
 char file_name1[100]="data_files/ddmtd1.txt";
 char file_name2[100]="data_files/ddmtd2.txt";
 char file_name3[100]="data_files/ddmtd3.txt";
@@ -219,8 +219,8 @@ memset(memory_LongStore_3, 0xff, num_Bytes);
 
 
 
-
-unsigned int *bram_addr_1 = mmap(NULL,ADDR_MAP_SIZE , PROT_READ | PROT_WRITE, MAP_SHARED,mem_fd,0xa0010000); // Memory map AXI Lite register block
+//Change the addresses to the address map 
+unsigned int *bram_addr_1 = mmap(NULL,ADDR_MAP_SIZE , PROT_READ | PROT_WRITE, MAP_SHARED,mem_fd,0x80000000); // Memory map AXI Lite register block
 if(bram_addr_1 == (void *) -1) {printf("FATAL BRAM ADDR"); return 0;};  
 bram_addr_1[0] = num_words; // Number of words to transfer // First addr reserved for fpga settings
 uint *bram_data_addr_1 = bram_addr_1 + read_width/32; //data will be transferred from the Next line
@@ -228,7 +228,7 @@ memset(bram_data_addr_1, 0xff, bytes_transferred); //reset memory
 
 
 
-unsigned int *bram_addr_2 = mmap(NULL,ADDR_MAP_SIZE , PROT_READ | PROT_WRITE, MAP_SHARED,mem_fd,0xa0018000 ); // Memory map AXI Lite register block
+unsigned int *bram_addr_2 = mmap(NULL,ADDR_MAP_SIZE , PROT_READ | PROT_WRITE, MAP_SHARED,mem_fd,0x82000000 ); // Memory map AXI Lite register block
 if(bram_addr_2 == (void *) -1) {printf("FATAL BRAM ADDR"); return 0;};  
 unsigned int *fpga_settings = bram_addr_2;
 firmware_version = 0xff&(fpga_settings[0] >> 24); //first 8 bits is firmware information
@@ -242,7 +242,7 @@ uint *bram_data_addr_2 = bram_addr_2 + read_width/32; //data will be transferred
 memset(bram_data_addr_2, 0xff, bytes_transferred); //reset memory
 
 
-unsigned int *bram_addr_3 = mmap(NULL,ADDR_MAP_SIZE , PROT_READ | PROT_WRITE, MAP_SHARED,mem_fd,0xa0020000 ); // Memory map AXI Lite register block
+unsigned int *bram_addr_3 = mmap(NULL,ADDR_MAP_SIZE , PROT_READ | PROT_WRITE, MAP_SHARED,mem_fd,0x84000000 ); // Memory map AXI Lite register block
 if(bram_addr_3 == (void *) -1) {printf("FATAL BRAM ADDR"); return 0;};  
 // bram_addr_3[0] = num_words; // Number of words to transfer // First addr reserved for fpga settings
 uint *bram_data_addr_3 = bram_addr_3 + read_width/32; //data will be transferred from the Next line
