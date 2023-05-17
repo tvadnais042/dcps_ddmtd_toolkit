@@ -46,11 +46,10 @@ ssh -T $HOST << EOF
 
 #echo "Loading Firmware: "$FIRMWARE
 #./do_load.sh $FIRMWARE
-cd ~/dcps_ddmtd_toolkit/acq_software/data_acq
-
+cd data_acq
  echo "Compiling get_data_bram"
- chmod +x compile.sh
- ./compile.sh
+sudo chmod +x compile.sh
+sudo  ./compile.sh
 
 echo "Running get_data_bram"
 sudo xmutil unloadapp
