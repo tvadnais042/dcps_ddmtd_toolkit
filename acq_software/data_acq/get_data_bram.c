@@ -151,6 +151,12 @@ double cpu_time_used;
 
 int mem_fd = open("/dev/mem", O_RDWR | O_SYNC); // Open /dev/mem which represents the whole physical memory
 
+struct stat st = {0};
+
+if (stat("data_files", &st) == -1) {
+    mkdir("data_files" , 0777);
+}
+
 //Nishant Have data_files folder present, otherwise you will get a segmentation fault
 char file_name1[100]="data_files/ddmtd1.txt";
 char file_name2[100]="data_files/ddmtd2.txt";
